@@ -20,7 +20,7 @@ Eve and Wall-e
 <br />虽然用的不会多，主要对整体架构更了解了，很有收获～
 
 # Architectural
-![](/screen/EveArchitecture.png)
+![](/EveArchitecture.png)
 
 # Download
 [下载](http://fir.im/walle)
