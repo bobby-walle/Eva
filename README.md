@@ -29,11 +29,11 @@ Eve and Wall-e
 # Screen
 这录屏转Gif～～，我要去找点好工具
 
-![](/screen/eve_01.png) 
-![](/screen/eve_02.png) 
+![](/screen/eve_01.gif) 
+![](/screen/eve_02.gif) 
 
-![](/screen/eve_03.png) 
-![](/screen/eve_04.png) 
+![](/screen/eve_03.gif) 
+![](/screen/eve_04.gif) 
 
 ## Functionality & Libraries
 1. [`Mvp` Google's official` Mvp` architecture project, which contains several different schema branches (this is the Dagger branch).](https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger/)
