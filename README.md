@@ -25,7 +25,7 @@ Eve and Wall-e
 # Download
 [下载](http://fir.im/walle)
 
-# Screen
+## Screen
 这录屏转Gif～～，我要去找点好工具
 
 ![](/screen/eve_01.gif) 
