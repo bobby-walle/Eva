@@ -12,6 +12,22 @@ Eve and Wall-e
         <br />gank.io、Douban、MVPArms ==
         </b>]]>
 
+## Functionality & Libraries
+1. [`Mvp` Google's official` Mvp` architecture project, which contains several different schema branches (this is the Dagger branch).](https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger/)
+2. [`Dagger2`](https://github.com/google/dagger)
+3. [`RxJava`](https://github.com/ReactiveX/RxJava)
+4. [`RxAndroid`](https://github.com/ReactiveX/RxAndroid)
+5. [`Rxlifecycle`](https://github.com/trello/RxLifecycle)
+6. [`RxCache`](https://github.com/VictorAlbertos/RxCache)
+7. [`Retrofit`](https://github.com/square/retrofit)
+8. [`Okhttp`](https://github.com/square/okhttp)
+9. [`Gson`](https://github.com/google/gson)
+10. [`Butterknife`](https://github.com/JakeWharton/butterknife)
+11. [`Glide`](https://github.com/bumptech/glide)
+12. [`LeakCanary`](https://github.com/square/leakcanary)
+13. [`SmartRefreshLayout`](https://github.com/scwang90/SmartRefreshLayout)
+13. [`folding-cell`](https://github.com/Ramotion/folding-cell-android)
+
 # Licensed
 <![CDATA[Copyright 2017 BobEve.<br />
         <br />EULA
