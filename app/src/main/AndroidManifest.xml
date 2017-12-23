@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bob.eve.pm">
+
+  <!-- 这个权限用于进行网络定位 BaiDu -->
+  <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+  <!-- 这个权限用于访问GPS定位 BaiDu -->
+  <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+  <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 BaiDu -->
+  <!--<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
+  <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 BaiDu -->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 BaiDu -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!-- 用于读取手机当前的状态 BaiDu -->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 BaiDu -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- SD卡读取权限，用户写入离线定位数据 BaiDu -->
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+  <!-- 访问网络，网络定位需要上网 BaiDu -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- Bugly -->
+  <uses-permission android:name="android.permission.READ_LOGS" />
+
+  <application
+      android:name=".app.PmWeatherApplication"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".ui.activity.WelcomeActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.Launcher">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ui.activity.MainActivity"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.Main" />
+
+    <activity
+        android:name=".ui.activity.TencentWebActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustResize" />
+    <activity
+        android:name=".ui.activity.ImageDetailActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.SwipeBack"
+        android:windowSoftInputMode="stateHidden|adjustResize" />
+    <activity
+        android:name="com.tencent.smtt.sdk.VideoActivity"
+        android:alwaysRetainTaskState="true"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:exported="false"
+        android:launchMode="singleTask">
+      <intent-filter>
+        <action android:name="com.tencent.smtt.tbs.video.PLAY" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>

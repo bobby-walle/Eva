@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-19 下午5:35
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-19 下午5:35
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <include layout="@layout/common_state_recyclerview" />
+</android.support.constraint.ConstraintLayout>

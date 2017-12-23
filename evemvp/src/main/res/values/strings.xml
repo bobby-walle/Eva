@@ -1,0 +1,15 @@
+<!--
+  ~ Create by BobEve on 17-12-10 下午10:10
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-10 下午10:10
+  -->
+
+<resources>
+  <string name="app_name">EveMvp</string>
+
+  // error message
+  <string name="error_message_unknown">TUnknown error</string>
+  <string name="error_message_network">There is no internet connection</string>
+  <string name="error_message_params">The params error</string>
+</resources>

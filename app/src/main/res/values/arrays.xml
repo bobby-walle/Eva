@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-18 上午12:57
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-17 下午11:13
+  -->
+
+<resources>
+
+  <string-array name="ld_activityScreenTitles">
+    <item>技术栈</item> <!-- gankio技术文章 -->
+    <item>小电影</item> <!-- 豆瓣电影 gankio视频 -->
+    <item>这是妹纸</item><!-- gankio福利 天行girls 美女图片	http://api.tianapi.com/meinv/?key=APIKEY&num=10 -->
+    <!--<item>闲读</item>&lt;!&ndash; 知乎api gankio推荐阅读 &ndash;&gt;-->
+    <item />
+    <item>设置</item>
+    <item>About</item>
+  </string-array>
+
+  <array name="ld_activityScreenIcons">
+    <item>@drawable/ic_menu_coding</item>
+    <item>@drawable/ic_menu_movie</item>
+    <item>@drawable/ic_menu_girls</item>
+    <!--<item>@drawable/ic_menu_read</item>-->
+    <item>0</item><!-- 阅读模块后续开放 -->
+    <item>@drawable/ic_menu_setting</item>
+    <item>@drawable/ic_menu_about</item>
+  </array>
+
+  <string-array name="it_circle_tab_titles">
+    <item>我卓</item>
+    <item>iOS</item>
+    <item>Web</item>
+    <item>拓展资源</item>
+  </string-array>
+
+  <string-array name="movie_tab_titles">
+    <item>豆瓣Top250</item>
+    <item>休息休息</item>
+    <item>北美票房榜</item>
+  </string-array>
+
+  <string-array name="hi_girl_tab_titles">
+    <item>正常的福利</item>
+    <item>也是福利</item>
+  </string-array>
+
+  <string-array name="reading_tab_titles">
+    <item>干货阅读</item>
+    <item>最新</item>
+    <item>热门</item>
+    <item>主题</item>
+    <item>专栏</item>
+    <item>豆瓣书单</item>
+  </string-array>
+
+  <string-array name="gank_category_list">
+    <item>all</item>
+    <item>Android</item>
+    <item>iOS</item>
+    <item>休息视频</item>
+    <item>福利</item>
+    <item>拓展资源</item>
+    <item>前端</item>
+    <item>瞎推荐</item>
+    <item>App</item>
+  </string-array>
+</resources>

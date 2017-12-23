@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- 底层白色 -->
+  <item android:drawable="@color/backgroundColor" />
+
+  <!-- 顶层Logo居中 -->
+  <item android:id="@+id/launcher">
+    <bitmap
+        android:gravity="center"
+        android:src="@mipmap/walle_launcher" />
+  </item>
+  
+</layer-list>

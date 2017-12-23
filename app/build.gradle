@@ -1,0 +1,110 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+  defaultConfig {
+    applicationId "bob.eve.pm"
+    minSdkVersion rootProject.ext.android["minSdkVersion"]
+    targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+    versionCode rootProject.ext.android["versionCode"]
+    versionName rootProject.ext.android["versionName"]
+    resConfigs "zh"
+    multiDexEnabled true
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    ndk {
+      // 设置支持的SO库架构
+      abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+    }
+
+
+    vectorDrawables.useSupportLibrary = true
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  splits {
+    /*
+     enable：boolean型，表示打开或关闭APK分割功能
+     reset()：复位，若要使用include功能，则使用前需调用reset()
+     include：创建白名单，仅构建出白名单中指定的格式
+     exclude：黑名单，不会构建出黑名单中指定的格式>* compatibleScreens(仅限density)：未知
+     universalApk(仅限ABI)：默认为true，即除了指定的格式外，还会构建出一个通用的APK
+     */
+    /*
+     android{
+      splits {
+        density {
+          enable true exclude 'ldpi','mdpi' compatibleScreens 'normal', 'large', 'xlarge'
+        }
+      }
+     }
+     */
+    /*
+     android{
+      splits {
+       abi {
+        enable true reset() include 'x86', 'armeabi-v7a', 'mips' universalApk false
+        }
+      }
+     }
+     */
+
+    abi {
+      enable true
+      reset()
+      include 'armeabi'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
+  implementation project(':evemvp')
+  implementation project(':everepository')
+  implementation project(':evelib')
+  api rootProject.ext.dependencies["constraint-layout"]
+  implementation rootProject.ext.dependencies["cardview-v7"]
+
+  // annotationProcessor来代替android-apt
+  implementation 'com.android.support:support-v4:27.0.2'
+  implementation 'com.android.support:support-vector-drawable:27.0.2'
+  annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+  annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+    exclude module: 'support-annotations'
+  }
+  compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+  compile 'com.yarolegovich:sliding-root-nav:1.1.0'
+  compile 'com.yarolegovich:discrete-scrollview:1.3.2'
+  compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+
+  implementation 'com.ramotion.foldingcell:folding-cell:1.2.1'
+  implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+  implementation('com.mikepenz:aboutlibraries:6.0.1@aar') {
+    transitive = true
+  }
+  implementation 'com.github.bumptech.glide:glide:4.4.0'
+  implementation 'com.github.bumptech.glide:okhttp3-integration:4.4.0'
+  annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+
+  debugImplementation rootProject.ext.dependencies["canary-debug"]
+  releaseImplementation rootProject.ext.dependencies["canary-release"]
+  testImplementation rootProject.ext.dependencies["canary-release"]
+  implementation 'com.orhanobut:logger:2.1.1'
+
+  // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
+  debugCompile 'com.github.markzhai:blockcanary-android:1.5.0'
+  releaseCompile 'com.github.markzhai:blockcanary-no-op:1.5.0'
+  compile 'com.tencent.bugly:crashreport:latest.release'
+
+  // test
+  testApi rootProject.ext.dependencies["junit"]
+  testApi rootProject.ext.dependencies["runner"]
+  testApi rootProject.ext.dependencies["espresso-core"]
+}

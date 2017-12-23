@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    >
+
+  <android.support.design.widget.AppBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/app_bar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:baselineAligned="false"
+      app:elevation="3dp"
+      >
+    <FrameLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+      <include layout="@layout/include_toolbar" />
+      <!--<com.miguelcatalan.materialsearchview.MaterialSearchView-->
+      <!--android:id="@+id/view_search"-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="wrap_content" />-->
+
+    </FrameLayout>
+
+  </android.support.design.widget.AppBarLayout>
+
+  <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<!--
+  ~ Create by BobEve on 17-12-9 下午9:02
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-9 下午9:02
+  -->
+
+<resources>
+  <string name="app_name">EveCommonLibrary</string>
+  <string name="iv_description">ImageView</string>
+  <string name="source_error">The source is not specified.</string>
+  <string name="state_layout_empty_msg">暂无数据</string>
+  <string name="state_layout_error_retry_message">点击重试</string>
+  <string name="state_layout_loading_message">加载中...</string>
+
+</resources>

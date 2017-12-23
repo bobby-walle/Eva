@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-22 下午6:48
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-22 下午6:48
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+  <size
+      android:height="5dp"
+      android:width="5dp" />
+  <solid android:color="@color/lineColorPrimary" />
+</shape>

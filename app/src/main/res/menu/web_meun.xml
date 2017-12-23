@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-20 下午7:58
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-18 下午2:08
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+      android:id="@+id/action_fav"
+      android:icon="@drawable/ic_toolbar_unfav"
+      android:title="@string/action_fav"
+      app:showAsAction="never" />
+
+  <item
+      android:id="@+id/action_copy"
+      android:icon="@drawable/ic_toolbar_copy"
+      android:title="@string/action_copy"
+      app:showAsAction="never" />
+
+  <item
+      android:id="@+id/action_share"
+      android:icon="@drawable/ic_toolbar_share"
+      android:title="@string/action_share"
+      app:showAsAction="never" />
+
+</menu>

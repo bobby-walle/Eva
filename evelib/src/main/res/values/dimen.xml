@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-21 上午3:40
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-21 上午3:40
+  -->
+
+<resources>
+  <!-- shadow layout -->
+  <dimen name="default_corner_radius">4dp</dimen>
+  <dimen name="default_shadow_radius">4dp</dimen>
+  
+</resources>

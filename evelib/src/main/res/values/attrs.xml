@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-18 下午2:28
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-18 下午2:28
+  -->
+
+<resources>
+  <declare-styleable name="CoordinatorTabLayout">
+    <attr format="color" name="contentScrim" />
+    <attr format="color" name="tabIndicatorColor" />
+    <attr format="color" name="tabTextColor" />
+  </declare-styleable>
+
+  <declare-styleable name="SlidedImageView">
+    <attr format="float" name="siv_rate" />
+    <attr format="reference" name="siv_source" />
+    <attr format="enum" name="siv_axis">
+      <enum name="horizontal" value="0" />
+      <enum name="vertical" value="1" />
+    </attr>
+  </declare-styleable>
+
+  <declare-styleable name="StateLayout">
+    <!-- 空布局资源id -->
+    <attr format="reference" name="slEmptyResId" />
+    <!-- 加载中布局资源id -->
+    <attr format="reference" name="slLoadingResId" />
+    <!-- 错误布局资源id -->
+    <attr format="reference" name="slErrorResId" />
+
+    <!-- 空布局图片 -->
+    <attr format="reference" name="slEmptyImage" />
+    <!-- 空布局文本 -->
+    <attr format="string" name="slEmptyText" />
+
+    <!-- 错误布局图片 -->
+    <attr format="reference" name="slErrorImage" />
+    <!-- 错误布局文本 -->
+    <attr format="string" name="slErrorText" />
+    <!-- 错误布局重试按钮文本 -->
+    <attr format="string" name="slRetryText" />
+    <!-- 按钮文本颜色 -->
+    <attr format="color" name="slRetryTextColor" />
+    <!-- 按钮文本尺寸 -->
+    <attr format="dimension" name="slRetryTextSize" />
+    <!-- 按钮背景 -->
+    <attr format="reference" name="slRetryBackground" />
+
+    <!-- 文本颜色 -->
+    <attr format="color" name="slTextColor" />
+    <!-- 文本尺寸 -->
+    <attr format="dimension" name="slTextSize" />
+
+  </declare-styleable>
+
+  <declare-styleable name="ParallaxViewPager">
+    <attr name="mode">
+      <enum name="left_overlay" value="0" />
+      <enum name="right_overlay" value="1" />
+      <enum name="none" value="2" />
+    </attr>
+    <attr format="fraction|dimension" name="outset" />
+    <attr format="reference" name="interpolator" />
+    <attr format="dimension" name="shadow_width" />
+    <attr format="reference" name="left_shadow" />
+    <attr format="reference" name="right_shadow" />
+  </declare-styleable>
+
+  <!-- https://github.com/Devlight/NavigationTabStrip -->
+  <declare-styleable name="NavigationTabStrip">
+    <attr format="color" name="nts_color" />
+    <attr format="dimension" name="nts_size" />
+    <attr format="dimension" name="nts_weight" />
+    <attr format="float" name="nts_factor" />
+    <attr format="reference" name="nts_titles" />
+
+    <attr format="enum" name="nts_type">
+      <enum name="line" value="0" />
+      <enum name="point" value="1" />
+    </attr>
+    <attr format="enum" name="nts_gravity">
+      <enum name="bottom" value="0" />
+      <enum name="top" value="1" />
+    </attr>
+
+    <attr format="string" name="nts_typeface" />
+    <attr format="dimension" name="nts_corners_radius" />
+    <attr format="integer" name="nts_animation_duration" />
+
+    <attr format="color" name="nts_inactive_color" />
+    <attr format="color" name="nts_active_color" />
+  </declare-styleable>
+
+  <declare-styleable name="TagGroup">
+    <!-- Whether the tag group is in append mode. -->
+    <attr format="boolean" name="atg_isAppendMode" />
+    <!-- If the tag group is in append mode, what the hint of input tag. -->
+    <attr format="string" name="atg_inputHint" />
+
+    <!-- The tag view outline border color. -->
+    <attr format="color" name="atg_borderColor" />
+    <!-- The tag view text color. -->
+    <attr format="color" name="atg_textColor" />
+    <!-- The tag view background color. -->
+    <attr format="color" name="atg_backgroundColor" />
+
+    <!-- The dash outline border color, when in append mode. -->
+    <attr format="color" name="atg_dashBorderColor" />
+    <!-- The input tag hint text color, when in append mode. -->
+    <attr format="color" name="atg_inputHintColor" />
+    <!-- The input tag type text color, when in append mode. -->
+    <attr format="color" name="atg_inputTextColor" />
+
+    <!-- The checked tag view outline border color. -->
+    <attr format="color" name="atg_checkedBorderColor" />
+    <!-- The checked text color. -->
+    <attr format="color" name="atg_checkedTextColor" />
+    <!-- The checked marker color. -->
+    <attr format="color" name="atg_checkedMarkerColor" />
+    <!-- The checked tag view background color. -->
+    <attr format="color" name="atg_checkedBackgroundColor" />
+
+    <!-- The tag view background color, when the tag view is being pressed. -->
+    <attr format="color" name="atg_pressedBackgroundColor" />
+
+    <!-- The tag view outline border stroke width. -->
+    <attr format="dimension" name="atg_borderStrokeWidth" />
+    <!-- The tag view text size. -->
+    <attr format="dimension" name="atg_textSize" />
+
+    <attr format="dimension" name="atg_horizontalSpacing" />
+    <attr format="dimension" name="atg_verticalSpacing" />
+    <attr format="dimension" name="atg_horizontalPadding" />
+    <attr format="dimension" name="atg_verticalPadding" />
+  </declare-styleable>
+
+  <declare-styleable name="Themes">
+    <attr format="reference" name="tagGroupStyle" />
+  </declare-styleable>
+
+</resources>

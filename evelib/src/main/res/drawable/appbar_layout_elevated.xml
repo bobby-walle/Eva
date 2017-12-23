@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-18 下午2:37
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-18 下午2:37
+  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <objectAnimator android:duration="1" android:propertyName="elevation" android:valueTo="8dp" android:valueType="floatType" />
+  </item>
+</selector>

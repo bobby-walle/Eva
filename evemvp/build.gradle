@@ -1,0 +1,49 @@
+/*
+ * Create by BobEve on 17-12-10 下午10:10
+ * Copyright (c) 2017. All rights reserved.
+ *
+ * Last modified 17-12-10 下午10:10
+ */
+
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+  defaultConfig {
+    minSdkVersion rootProject.ext.android["minSdkVersion"]
+    targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+    versionCode rootProject.ext.android["versionCode"]
+    versionName rootProject.ext.android["versionName"]
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation project(':everepository')
+  implementation project(':evelib')
+
+  api rootProject.ext.dependencies["statusbaruitl"]
+//  api rootProject.ext.dependencies["swipebacklayout"]
+
+  // annotationProcessor来代替android-apt
+  annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+  annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+    exclude module: 'support-annotations'
+  }
+
+  // test
+  testApi rootProject.ext.dependencies["junit"]
+  testApi rootProject.ext.dependencies["runner"]
+  testApi rootProject.ext.dependencies["espresso-core"]
+}

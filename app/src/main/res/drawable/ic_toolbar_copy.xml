@@ -1,0 +1,16 @@
+<!--
+  ~ Create by BobEve on 17-12-20 下午8:01
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-20 下午8:01
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="64dp"
+        android:height="64dp"
+        android:viewportWidth="1024.0"
+        android:viewportHeight="1024.0">
+    <path
+        android:pathData="M876.8,147.2C864,134.4 851.2,128 832,128L384,128c-38.4,0 -64,25.6 -64,64v64L192,256c-32,0 -64,25.6 -64,64v576c0,38.4 25.6,64 64,64h512c32,0 64,-25.6 64,-64v-64h64c38.4,0 64,-25.6 64,-64L896,192c0,-19.2 -6.4,-32 -19.2,-44.8zM640,832L256,832v-64h384v64zM640,640L256,640v-64h384v64zM640,448L256,448v-64h384v64zM832,768h-64L768,320c0,-32 -25.6,-64 -64,-64L384,256v-64h448v576z"
+        android:fillColor="#44000000"/>
+</vector>

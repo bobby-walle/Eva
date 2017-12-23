@@ -1,0 +1,71 @@
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="colorControlNormal">@color/textColorPrimary</item>
+    <item name="actionOverflowMenuStyle">@style/ToolbarTheme</item>
+  </style>
+
+  <style name="AppTheme.Main" parent="AppTheme">
+    <item name="android:windowBackground">@color/backgroundColor</item>
+    <item name="android:windowIsTranslucent">false</item>
+  </style>
+
+  <style name="AppTheme.SwipeBack" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <item name="android:windowIsTranslucent">true</item>
+  </style>
+
+  <!--@android:style/Theme.NoTitleBar.Fullscreen-->
+  <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- 通过windowBackground可以设置背景色、背景图片、能解析出图片的XML文件等-->
+    <item name="android:windowBackground">@drawable/welcome_launcher</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+
+  <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
+    <!-- 标题栏颜色 -->
+    <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    <item name="colorButtonNormal">@color/textColorPrimary</item>
+    <item name="colorControlNormal">@color/textColorPrimary</item>
+    <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+  </style>
+
+  <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+    <item name="overlapAnchor">false</item>
+    <!--toolBarlbar 溢出菜单的背景颜色 -->
+    <item name="android:popupBackground">@color/backgroundColor</item>
+    <!--toolBarlbar 溢出菜单的文字颜色 -->
+    <item name="android:textColor">@color/textColorSecondary</item>
+  </style>
+
+  <style name="item_text_style">
+    <item name="android:maxLines">1</item>
+    <item name="android:paddingBottom">4dp</item>
+    <item name="android:paddingLeft">8dp</item>
+    <item name="android:paddingRight">8dp</item>
+    <item name="android:paddingTop">4dp</item>
+    <item name="android:gravity">center_vertical</item>
+  </style>
+
+  <style name="TagGroup">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="atg_isAppendMode">false</item>
+    <item name="atg_borderColor">@color/colorPrimary</item>
+    <item name="atg_textColor">@color/textColorSecondary</item>
+    <item name="atg_backgroundColor">@color/cardBackgroundColor</item>
+    <item name="atg_dashBorderColor">@color/colorPrimary</item>
+    <item name="atg_borderStrokeWidth">0.5dp</item>
+    <item name="atg_textSize">16sp</item>
+    <item name="atg_horizontalSpacing">6dp</item>
+    <item name="atg_verticalSpacing">3dp</item>
+    <item name="atg_horizontalPadding">8dp</item>
+    <item name="atg_verticalPadding">2dp</item>
+    <item name="android:maxLines">1</item>
+  </style>
+
+
+</resources>

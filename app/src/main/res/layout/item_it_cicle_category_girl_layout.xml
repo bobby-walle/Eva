@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-20 下午2:50
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-20 上午1:20
+  -->
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/dimen_6dp"
+    android:layout_marginRight="@dimen/dimen_6dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@color/cardBackgroundColor"
+    card_view:cardCornerRadius="@dimen/dimen_4dp"
+    card_view:cardUseCompatPadding="true"
+    >
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <bob.eve.comm.lib.view.ScrollImageView
+        android:id="@id/icc_scroll_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        />
+    <TextView
+        android:id="@+id/icc_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/icc_time"
+        android:layout_toLeftOf="@+id/icc_time"
+        android:layout_toStartOf="@+id/icc_time"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/text_size_14sp"
+        style="@style/item_text_style"
+        />
+
+    <TextView
+        android:id="@+id/icc_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/text_size_12sp"
+        style="@style/item_text_style"
+        />
+
+  </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-23 上午1:43
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-23 上午1:39
+  --><!--<![CDATA[{gmi-favorite} 项目参考MVP、Clean Architecture结构--><!--<br />UI事件触发后通过Presenter中转进入对应Model进行处理。--><!--<br />Model中持有数据仓库，获取规则通过上层确认，获取过程对上层透明。--><!--<br />Repository采用Rxjava、Retrofit、Rxcache进行管理，--><!--<br />MVP中Activity、Fragment做View层，定义Contract接口处理V、P逻辑，--><!--<br />M、P数据交互通过Mapper用以隔离Model层数据结构对V层展示的影响。--><!--<br />--><!--<br />感谢所有做分享的个人和公司，欢迎提Issues @@～--><!--<br />gank.io、Douban、MVPArms ==--><!--</b>]]>-->
+<resources>
+  <string name="aboutLibraries_description_name">Eve</string>
+  <string name="aboutLibraries_description_showIcon">true</string>
+  <string name="aboutLibraries_description_showVersion">true</string>
+  <string name="aboutLibraries_description_text">
+        <![CDATA[项目参考MVP、Clean Architecture结构
+        <br />
+        <br />Launcher是<b>Wall-e</b>
+        <br />
+        <br />App Name是<b>Eve</b>
+        <br />
+        <br />我喜欢<a href="http://www.w3school.com.cn/"><i>WALL·E{机器人总动员}</i></a>
+        <br />
+        <br />感谢所有做分享的个人和公司，欢迎提Issues @@～
+        <br />gank.io、Douban、MVPArms ==
+        </b>]]>
+    </string>
+
+  <!-- Just remove those entries if you don't want to use a special button with a text within your about this app view :D -->
+  <string name="aboutLibraries_description_special1_name">协议</string>
+  <string name="aboutLibraries_description_special1_text">
+        <![CDATA[Copyright 2017 BobEve.<br />
+        <br />EULA
+        <br />Licensed under the Apache License, Version 2.0 (the "License");
+        <br />you may not use this file except in compliance with the License.
+        <br />You may obtain a copy of the License at
+        <br />
+        <i>http://www.apache.org/licenses/LICENSE-2.0</i>
+        <br />Unless required by applicable law or agreed to in writing,
+        software distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions
+        and limitations under the License.<br />
+        ]]>
+    </string>
+  <string name="aboutLibraries_description_special2_name">声明</string>
+  <string name="aboutLibraries_description_special2_text">
+        <![CDATA[应用中展示的所有内容均搜集自互联网，若内容有侵权请联系作者进行删除处理。<br />
+        本应用仅用作分享与学习。<br />
+        ]]>
+    </string>
+  <string name="aboutLibraries_description_special3_name">版本信息</string>
+  <string name="aboutLibraries_description_special3_text">
+        <![CDATA[
+        <i>Version 1.0.1</i><br />
+        - 项目框架基本搭建完成 ;)<br />
+        - 接入干货<https://gank.io>数据<br />
+        - 妹纸图<br />
+        - 豆瓣的2个电影排行榜～～！<br />
+        - 夜间模式<br />
+        - 一些UI交互<br />
+        <br />
+        <i>预览 1.0.x</i><br />
+        - 知乎日报 ;)<br />
+        - AQICN PM2.5 ;)<br />
+        - 遗留的好多问题 :D<br />
+        - 其他可以看主页吧 ;)<br />
+        ]]>
+    </string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    >
+
+  <Space
+      android:layout_width="wrap_content"
+      android:layout_height="90dp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:paddingStart="24dp"
+      android:text="@string/pm25_source_message"
+      android:textSize="12sp"
+      />
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:baselineAligned="false"
+      android:orientation="horizontal"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      >
+
+    <TextView
+        android:id="@+id/pm25_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/pm25_message"
+        />
+
+    <TextView
+        android:id="@+id/pm25_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pm25_value"
+        android:textSize="34sp"
+        />
+
+  </LinearLayout>
+
+  <Space
+      android:layout_width="wrap_content"
+      android:layout_height="56dp"
+      />
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/menu_rv"
+      android:layout_width="240dp"
+      android:layout_height="wrap_content"
+      />
+
+  <Space
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      />
+
+</LinearLayout>

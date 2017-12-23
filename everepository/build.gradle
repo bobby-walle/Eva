@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+  defaultConfig {
+    minSdkVersion rootProject.ext.android["minSdkVersion"]
+    targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+    versionCode rootProject.ext.android["versionCode"]
+    versionName rootProject.ext.android["versionName"]
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation project(':evelib')
+
+  // annotationProcessor来代替android-apt
+  annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+  annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+    exclude module: 'support-annotations'
+  }
+  
+  // network
+  api(rootProject.ext.dependencies["retrofit"]) {
+    exclude module: 'okhttp'
+    exclude module: 'okio'
+  }
+  implementation(rootProject.ext.dependencies["retrofit-converter-gson"]) {
+    exclude module: 'gson'
+    exclude module: 'okhttp'
+    exclude module: 'okio'
+    exclude module: 'retrofit'
+  }
+  implementation(rootProject.ext.dependencies["retrofit-adapter-rxjava2"]) {
+    exclude module: 'rxjava'
+    exclude module: 'okhttp'
+    exclude module: 'retrofit'
+    exclude module: 'okio'
+  }
+  api rootProject.ext.dependencies["okhttp3"]
+
+  //rx
+  api rootProject.ext.dependencies["rxjava2"]
+  api(rootProject.ext.dependencies["rxandroid2"]) {
+    exclude module: 'rxjava'
+  }
+  api rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+
+  // cache
+  api(rootProject.ext.dependencies["rxcache2"]) {
+    exclude module: 'rxjava'
+    exclude module: 'dagger'
+  }
+  implementation(rootProject.ext.dependencies["rxcache-jolyglot-gson"]) {
+    exclude module: 'gson'
+  }
+
+  // test
+  testApi rootProject.ext.dependencies["junit"]
+  testApi rootProject.ext.dependencies["runner"]
+  testApi rootProject.ext.dependencies["espresso-core"]
+}

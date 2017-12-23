@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-18 下午2:29
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-18 下午2:29
+  -->
+
+<resources>
+
+  <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+    <item name="tabTextAppearance">@style/TabTextAppearance</item>
+  </style>
+
+  <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+    <item name="textAllCaps">false</item>
+  </style>
+
+  <style name="TagGroup">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="atg_isAppendMode">false</item>
+    <item name="atg_borderStrokeWidth">0.5dp</item>
+    <item name="atg_textSize">12sp</item>
+    <item name="atg_horizontalSpacing">6dp</item>
+    <item name="atg_verticalSpacing">3dp</item>
+    <item name="atg_horizontalPadding">8dp</item>
+    <item name="atg_verticalPadding">2dp</item>
+    <item name="android:maxLines">2</item>
+  </style>
+
+  <declare-styleable name="ShadowLayout">
+    <attr format="dimension" name="sl_cornerRadius" />
+    <attr format="dimension" name="sl_shadowRadius" />
+    <attr format="color" name="sl_shadowColor" />
+    <attr format="dimension" name="sl_dx" />
+    <attr format="dimension" name="sl_dy" />
+  </declare-styleable>
+
+</resources>

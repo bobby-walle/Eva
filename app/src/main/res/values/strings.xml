@@ -1,0 +1,25 @@
+<resources>
+  <string name="app_name">EveHttp</string>
+
+  <string name="action_fav">收藏</string>
+  <string name="action_share">分享</string>
+  <string name="action_save">保存</string>
+  <string name="action_copy">复制</string>
+  <string name="action_search">搜索</string>
+  <string name="pm25_message">pm2.5</string>
+  <string name="pm25_value">110</string>
+  <string name="pm25_source_message">from Aqicn.org</string>
+  <string name="normal_setting_message">常规</string>
+  <string name="setting_cache">自动缓存</string>
+  <string name="setting_image">无图模式</string>
+  <string name="setting_wifi_image">WIFI自动加载图片</string>
+  <string name="setting_night">夜间模式</string>
+  <string name="other_setting_message">其他</string>
+  <string name="setting_feedback">意见反馈</string>
+  <string name="setting_clear">清除缓存</string>
+  <string name="setting_update">检查更新</string>
+  <string name="version">当前版本号：v1.0.1</string>
+  <string name="feedback_email_message">感谢你的意见</string>
+  <string name="cur_version">当前版本号 v%s</string>
+
+</resources>

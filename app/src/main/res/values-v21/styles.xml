@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-22 下午5:16
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-22 下午5:16
+  -->
+
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="colorControlNormal">@color/textColorPrimary</item>
+    <!-- 启用transitions框架和管理器，TransitionManger会默认在界面切换时使用CrossFade效果，该属性包含ActivityTransition  -->
+    <item name="android:windowContentTransitions">true</item>
+    <!-- 启用Transition框架,但没有默认的动画, 需要通过bundle设定动画，设定false则从ContentTransition中关闭此效果-->
+    <item name="android:windowActivityTransitions">true</item>
+    <!--是否允许动画重叠-->
+    <item name="android:windowAllowEnterTransitionOverlap">false</item>
+    <item name="android:windowAllowReturnTransitionOverlap">false</item>
+  </style>
+</resources>

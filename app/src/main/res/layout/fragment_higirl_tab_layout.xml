@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-18 下午7:25
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-12-18 下午7:25
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <bob.eve.comm.lib.layout.tab.NavigationTabStrip
+      android:id="@+id/navigationTabStrip"
+      android:layout_width="match_parent"
+      android:layout_height="46dp"
+      android:layout_gravity="center_horizontal"
+      android:background="@drawable/shape_shadow_black"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:nts_active_color="@color/colorPrimary"
+      app:nts_color="@color/colorAccent"
+      app:nts_corners_radius="2.5dp"
+      app:nts_factor="0.8"
+      app:nts_gravity="bottom"
+      app:nts_inactive_color="@color/textColorPrimary"
+      app:nts_size="15sp"
+      app:nts_titles="@array/hi_girl_tab_titles"
+      app:nts_type="point"
+      app:nts_weight="5dp"
+      />
+
+  <bob.eve.comm.lib.layout.viewpager.ParallaxViewPager
+      android:id="@id/parallaxViewPager"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/navigationTabStrip"
+      />
+</android.support.constraint.ConstraintLayout>
