@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import bob.eve.walle.R;
 
 /**
  * Created by Bob on 17/12/22.
@@ -28,7 +29,7 @@ public class WelcomeActivity extends AppCompatActivity {
 			public void run() {
 				toMain();
 			}
-		}, 700);
+		}, 1200);
 	}
 
 	private void toMain() {
@@ -36,6 +37,6 @@ public class WelcomeActivity extends AppCompatActivity {
 		intent.setClass(this, MainActivity.class);
 		startActivity(intent);
 		finish();
-		overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+		overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 }

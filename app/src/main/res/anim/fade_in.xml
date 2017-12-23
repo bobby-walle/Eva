@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-23 下午4:30
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-11-13 下午9:46
+  -->
+
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@android:integer/config_longAnimTime"
+    android:fromAlpha="0.3"
+    android:interpolator="@android:interpolator/decelerate_quad"
+    android:toAlpha="1.0" />

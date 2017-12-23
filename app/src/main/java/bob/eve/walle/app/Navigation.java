@@ -85,6 +85,9 @@ public class Navigation {
 		intent.putExtra(EveWebActivity.INTENT_IT_CICLE_DETAIL_TITLE, builder.title);
 		intent.putExtra(EveWebActivity.INTENT_IT_CICLE_DETAIL_ID, builder.id);
 		intent.putExtra(EveWebActivity.INTENT_IT_CICLE_DETAIL_CATEGORY, builder.category);
+		//		ActivityOptionsCompat options = ActivityOptionsCompat.makeCustomAnimation(builder.mContext,
+		//																																							R.anim.dock_bottom_enter,
+		//																																							R.anim.dock_bottom_exit);
 		ActivityOptionsCompat options =
 				ActivityOptionsCompat.makeSceneTransitionAnimation(builder.mActivity, builder.shareView,
 																													 "shareView");

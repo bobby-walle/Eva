@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by BobEve on 17-12-23 下午4:33
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 17-11-13 下午9:46
+  -->
+
+<!-- Animation for when a dock window at the bottom of the screen is exiting. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/accelerate_cubic">
+  <translate
+      android:duration="3000"
+      android:fromYDelta="0"
+      android:startOffset="100"
+      android:toYDelta="100%" />
+</set>
