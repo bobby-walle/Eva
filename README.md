@@ -35,7 +35,7 @@ Eve and Wall-e
 ![](/screen/eve_04.gif) 
 
 ## Functionality & Libraries
-1. [`Mvp` Google's official` Mvp` architecture project, which contains several different schema branches (this is the Dagger branch).](https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger/)
+1. [`Mvp` android-architecture](https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger/)
 2. [`Dagger2`](https://github.com/google/dagger)
 3. [`RxJava`](https://github.com/ReactiveX/RxJava)
 4. [`RxAndroid`](https://github.com/ReactiveX/RxAndroid)
