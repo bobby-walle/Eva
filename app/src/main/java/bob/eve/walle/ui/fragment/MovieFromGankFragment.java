@@ -207,6 +207,6 @@ public class MovieFromGankFragment extends EveDiBaseFragment<MovieFromGankPresen
 																												 .setUrl(item.getUrl())
 																												 .setCategorye(category)
 																												 .builder();
-		Navigation.NavToTencentWeb(builder);
+		Navigation.navToEveWeb(builder);
 	}
 }

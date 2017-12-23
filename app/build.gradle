@@ -14,12 +14,6 @@ android {
 
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-    ndk {
-      // 设置支持的SO库架构
-      abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
-    }
-
-
     vectorDrawables.useSupportLibrary = true
   }
   buildTypes {
@@ -29,39 +23,33 @@ android {
     }
   }
 
+  /*
   splits {
-    /*
      enable：boolean型，表示打开或关闭APK分割功能
      reset()：复位，若要使用include功能，则使用前需调用reset()
      include：创建白名单，仅构建出白名单中指定的格式
      exclude：黑名单，不会构建出黑名单中指定的格式>* compatibleScreens(仅限density)：未知
      universalApk(仅限ABI)：默认为true，即除了指定的格式外，还会构建出一个通用的APK
      */
-    /*
-     android{
-      splits {
-        density {
-          enable true exclude 'ldpi','mdpi' compatibleScreens 'normal', 'large', 'xlarge'
-        }
+  /*
+   android{
+    splits {
+      density {
+        enable true exclude 'ldpi','mdpi' compatibleScreens 'normal', 'large', 'xlarge'
       }
-     }
-     */
-    /*
-     android{
-      splits {
-       abi {
-        enable true reset() include 'x86', 'armeabi-v7a', 'mips' universalApk false
-        }
-      }
-     }
-     */
-
-    abi {
-      enable true
-      reset()
-      include 'armeabi'
     }
-  }
+   }
+   */
+  /*
+   android{
+    splits {
+     abi {
+      enable true reset() include 'x86', 'armeabi-v7a', 'mips' universalApk false
+      }
+    }
+   }
+}
+*/
 }
 
 dependencies {

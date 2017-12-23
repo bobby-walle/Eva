@@ -45,15 +45,14 @@ import io.reactivex.functions.Function;
 import io.reactivex.observers.DefaultObserver;
 import io.reactivex.schedulers.Schedulers;
 import java.io.File;
-import me.yokeyword.fragmentation.SwipeBackLayout;
-import me.yokeyword.fragmentation_swipeback.SwipeBackActivity;
+import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * Created by Bob on 17/12/22.
  * TODO 整合BaseActivity
  */
 
-public class ImageDetailActivity extends SwipeBackActivity implements View.OnClickListener {
+public class ImageDetailActivity extends SupportActivity implements View.OnClickListener {
 	public static final String INTENT_IT_CICLE_DETAIL_TITLE = "it_cicle_detail_title";
 	public static final String INTENT_IT_CICLE_DETAIL_URL = "it_cicle_detail_url";
 	public static final String INTENT_IT_CICLE_DETAIL_IMG_URL = "it_cicle_detail_img_url";
@@ -83,7 +82,7 @@ public class ImageDetailActivity extends SwipeBackActivity implements View.OnCli
 		setContentView(R.layout.activity_image_detail_layout);
 		mUnbinder = ButterKnife.bind(this);
 
-		getSwipeBackLayout().setEdgeOrientation(SwipeBackLayout.EDGE_ALL);
+		//		getSwipeBackLayout().setEdgeOrientation(SwipeBackLayout.EDGE_ALL);
 
 		initToolbar();
 		initData();
@@ -253,11 +252,10 @@ public class ImageDetailActivity extends SwipeBackActivity implements View.OnCli
 	 *
 	 * @return true: Activity优先滑动退出;  false: Fragment优先滑动退出
 	 */
-	@Override
-	public boolean swipeBackPriority() {
-		return super.swipeBackPriority();
-	}
-
+	//	@Override
+	//	public boolean swipeBackPriority() {
+	//		return super.swipeBackPriority();
+	//	}
 	protected boolean canBack() {
 		return true;
 	}
@@ -300,13 +298,12 @@ public class ImageDetailActivity extends SwipeBackActivity implements View.OnCli
 										 .flatMap(new Function<String, ObservableSource<Bitmap>>() {
 											 @Override
 											 public ObservableSource<Bitmap> apply(String s) throws Exception {
-												 Bitmap bitmap = GlideApp.with(context)
-																								 .asBitmap()
-																								 .load(s)
-																								 .submit(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-																								 .get();
-
-												 return Observable.just(bitmap);
+												 return Observable.just(GlideApp.with(context)
+																												.asBitmap()
+																												.load(s)
+																												.submit(Target.SIZE_ORIGINAL,
+																																Target.SIZE_ORIGINAL)
+																												.get());
 											 }
 										 })
 										 .flatMap(new Function<Bitmap, ObservableSource<Uri>>() {

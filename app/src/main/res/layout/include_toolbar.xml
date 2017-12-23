@@ -6,5 +6,5 @@
     android:background="?attr/colorPrimary"
     android:fitsSystemWindows="true"
     android:minHeight="?attr/actionBarSize"
-    android:theme="@style/ToolbarTheme"
+    android:theme="@style/AppTheme.Toolbar"
     /><!--app:titleTextColor="@color/textColorPrimary"-->

@@ -8,7 +8,6 @@
 package bob.eve.repository;
 
 import android.support.annotation.Nullable;
-import android.util.Log;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.inject.Inject;
@@ -17,6 +16,7 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
+import timber.log.Timber;
 
 /**
  * Created by Bob on 17/12/9.
@@ -42,8 +42,8 @@ public class EveLogInterceptor implements Interceptor {
 		long t2 = System.nanoTime();
 
 		// TODO 配置打印级别和Log开关
-		Log.e(TAG, request.url()
-											.toString() + "请求时间：" + TimeUnit.NANOSECONDS.toMillis(t2 - t1));
+		Timber.e(request.url()
+										.toString() + "请求时间：" + TimeUnit.NANOSECONDS.toMillis(t2 - t1));
 
 		ResponseBody responseBody = originalResponse.body();
 

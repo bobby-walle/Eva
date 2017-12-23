@@ -10,6 +10,7 @@ package bob.eve.walle.ui.fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import bob.eve.comm.lib.layout.state.StateLayout;
 import bob.eve.mvp.di.scope.PreFragment;
@@ -30,7 +31,12 @@ import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static bob.eve.walle.ui.fragment.tab.MovieTabFragment.MOVIE_TYPE_KEY;
 
@@ -169,15 +175,24 @@ public class MovieFromDoubanTop250Fragment extends EveDiBaseFragment<MovieFromDo
 
 		if (cell.isUnfolded()) {
 			MovieSubject item = (MovieSubject) adapter.getItem(position);
-			Navigation.Builder builder = new Navigation.Builder().setAnimConfig(getActivity(), view)
-																													 .setId(item.getId())
-																													 .setContext(mContext)
-																													 .setTitle(item.getTitle())
-																													 .setUrl(item.getAlt())
-																													 .setCategorye(
-																															 item.getSubtype() + "from_douban")
-																													 .builder();
-			Navigation.NavToTencentWeb(builder);
+			final Navigation.Builder builder = new Navigation.Builder().setAnimConfig(getActivity(), view)
+																																 .setId(item.getId())
+																																 .setContext(mContext)
+																																 .setTitle(item.getTitle())
+																																 .setUrl(item.getAlt())
+																																 .setCategorye(item.getSubtype() +
+																																							 "from_douban")
+																																 .builder();
+			Observable.timer(580, TimeUnit.MILLISECONDS)
+								.subscribeOn(Schedulers.computation())
+								.observeOn(AndroidSchedulers.mainThread())
+								.subscribe(new Consumer<Long>() {
+									@Override
+									public void accept(Long aLong) throws Exception {
+										Log.e(">>>>>>>>>", "go");
+										Navigation.navToEveWeb(builder);
+									}
+								});
 		}
 	}
 }

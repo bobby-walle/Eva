@@ -15,6 +15,10 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import bob.eve.comm.lib.util.NetworkUtils;
 import bob.eve.comm.lib.util.SystemShareUtils;
@@ -25,17 +29,13 @@ import bob.eve.walle.R;
 import bob.eve.walle.config.ImplPreferencesHelper;
 import bob.eve.walle.di.component.DaggerActivityComponent;
 import butterknife.BindView;
-import com.tencent.smtt.sdk.WebChromeClient;
-import com.tencent.smtt.sdk.WebSettings;
-import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
 import javax.inject.Inject;
 
 /**
  * Created by Bob on 17/12/20.
  */
 
-public class TencentWebActivity extends AbsEveEasyActivity {
+public class EveWebActivity extends AbsEveEasyActivity {
 	// ITCircleFromGankCategoryFragment 进入web也数据key
 	public static final String INTENT_IT_CICLE_DETAIL_TITLE = "it_cicle_detail_title";
 	public static final String INTENT_IT_CICLE_DETAIL_URL = "it_cicle_detail_url";

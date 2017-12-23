@@ -9,18 +9,18 @@
 
   <string-array name="ld_activityScreenTitles">
     <item>技术栈</item> <!-- gankio技术文章 -->
-    <item>小电影</item> <!-- 豆瓣电影 gankio视频 -->
     <item>这是妹纸</item><!-- gankio福利 天行girls 美女图片	http://api.tianapi.com/meinv/?key=APIKEY&num=10 -->
+    <item>小电影</item> <!-- 豆瓣电影 gankio视频 -->
     <!--<item>闲读</item>&lt;!&ndash; 知乎api gankio推荐阅读 &ndash;&gt;-->
     <item />
     <item>设置</item>
-    <item>About</item>
+    <item>关于</item>
   </string-array>
 
   <array name="ld_activityScreenIcons">
     <item>@drawable/ic_menu_coding</item>
-    <item>@drawable/ic_menu_movie</item>
     <item>@drawable/ic_menu_girls</item>
+    <item>@drawable/ic_menu_movie</item>
     <!--<item>@drawable/ic_menu_read</item>-->
     <item>0</item><!-- 阅读模块后续开放 -->
     <item>@drawable/ic_menu_setting</item>
@@ -35,7 +35,7 @@
   </string-array>
 
   <string-array name="movie_tab_titles">
-    <item>豆瓣Top250</item>
+    <item>Top_N榜</item>
     <item>休息休息</item>
     <item>北美票房榜</item>
   </string-array>

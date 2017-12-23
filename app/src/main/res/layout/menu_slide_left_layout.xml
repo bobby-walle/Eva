@@ -11,42 +11,50 @@
       android:layout_height="90dp"
       />
 
-  <TextView
+  <!--<TextView-->
+  <!--android:layout_width="wrap_content"-->
+  <!--android:layout_height="wrap_content"-->
+  <!--android:paddingLeft="24dp"-->
+  <!--android:paddingRight="24dp"-->
+  <!--android:paddingStart="24dp"-->
+  <!--android:text="@string/pm25_source_message"-->
+  <!--android:textSize="12sp"-->
+  <!--/>-->
+
+  <!--<LinearLayout-->
+  <!--android:layout_width="wrap_content"-->
+  <!--android:layout_height="wrap_content"-->
+  <!--android:baselineAligned="false"-->
+  <!--android:orientation="horizontal"-->
+  <!--android:paddingLeft="24dp"-->
+  <!--android:paddingRight="24dp"-->
+  <!--&gt;-->
+
+  <!--<TextView-->
+  <!--android:id="@+id/pm25_title"-->
+  <!--android:layout_width="wrap_content"-->
+  <!--android:layout_height="wrap_content"-->
+  <!--android:layout_marginTop="6dp"-->
+  <!--android:text="@string/pm25_message"-->
+  <!--/>-->
+
+  <!--<TextView-->
+  <!--android:id="@+id/pm25_value"-->
+  <!--android:layout_width="wrap_content"-->
+  <!--android:layout_height="wrap_content"-->
+  <!--android:text="@string/pm25_value"-->
+  <!--android:textSize="34sp"-->
+  <!--/>-->
+
+  <!--</LinearLayout>-->
+
+  <ImageView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:paddingLeft="24dp"
-      android:paddingRight="24dp"
-      android:paddingStart="24dp"
-      android:text="@string/pm25_source_message"
-      android:textSize="12sp"
+      android:layout_centerHorizontal="true"
+      android:layout_centerVertical="true"
+      android:src="@drawable/ic_eve_any"
       />
-
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:baselineAligned="false"
-      android:orientation="horizontal"
-      android:paddingLeft="24dp"
-      android:paddingRight="24dp"
-      >
-
-    <TextView
-        android:id="@+id/pm25_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:text="@string/pm25_message"
-        />
-
-    <TextView
-        android:id="@+id/pm25_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pm25_value"
-        android:textSize="34sp"
-        />
-
-  </LinearLayout>
 
   <Space
       android:layout_width="wrap_content"

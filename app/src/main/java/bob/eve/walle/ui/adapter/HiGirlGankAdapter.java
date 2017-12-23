@@ -14,7 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import bob.eve.walle.R;
-import bob.eve.walle.app.PmWeatherApplication;
+import bob.eve.walle.app.EveApplication;
 import bob.eve.walle.mvp.model.bean.gank.GankItem;
 import bob.eve.walle.ui.widget.imageloader.GlideApp;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -41,8 +41,8 @@ public class HiGirlGankAdapter extends BaseQuickAdapter<GankItem, BaseViewHolder
 			return 0;
 		}
 
-		return Math.round((float) PmWeatherApplication.SCREEN_WIDTH / (float) getData().get(position)
-																																									 .getHeight() *
+		return Math.round((float) EveApplication.SCREEN_WIDTH / (float) getData().get(position)
+																																						 .getHeight() *
 											10f);
 	}
 
@@ -56,7 +56,7 @@ public class HiGirlGankAdapter extends BaseQuickAdapter<GankItem, BaseViewHolder
 																							.getLayoutParams();
 				params.height = getData().get(position)
 																 .getHeight();
-				params.width = PmWeatherApplication.SCREEN_WIDTH / 2;
+				params.width = EveApplication.SCREEN_WIDTH / 2;
 				holder.getView(R.id.ig_image)
 							.setLayoutParams(params);
 			}
@@ -70,15 +70,15 @@ public class HiGirlGankAdapter extends BaseQuickAdapter<GankItem, BaseViewHolder
 						.asBitmap()
 						.load(item.getUrl())
 						.diskCacheStrategy(DiskCacheStrategy.ALL)
-						.into(new SimpleTarget<Bitmap>(PmWeatherApplication.SCREEN_WIDTH / 2,
-																					 PmWeatherApplication.SCREEN_WIDTH / 2) {
+						.into(new SimpleTarget<Bitmap>(EveApplication.SCREEN_WIDTH / 2,
+																					 EveApplication.SCREEN_WIDTH / 2) {
 							@Override
 							public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
 								if (helper.getAdapterPosition() != RecyclerView.NO_POSITION) {
 									if (item.getHeight() <= 0) {
 										final ImageView image = helper.getView(R.id.ig_image);
 										int imageHeight =
-												(PmWeatherApplication.SCREEN_WIDTH / 2) * resource.getHeight() /
+												(EveApplication.SCREEN_WIDTH / 2) * resource.getHeight() /
 												resource.getWidth();
 										item.setHeight(imageHeight);
 

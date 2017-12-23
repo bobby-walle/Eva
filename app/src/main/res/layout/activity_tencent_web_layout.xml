@@ -13,11 +13,16 @@
       android:layout_height="match_parent"
       android:transitionName="shareView"
       >
-    <com.tencent.smtt.sdk.WebView
+    <WebView
         android:id="@+id/tencent_wv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+    <!--<com.tencent.smtt.sdk.WebView-->
+    <!--android:id="@+id/tencent_wv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--/>-->
     <ProgressBar
         android:id="@+id/progress"
         android:layout_width="match_parent"

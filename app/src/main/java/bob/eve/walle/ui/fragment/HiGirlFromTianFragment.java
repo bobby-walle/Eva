@@ -202,6 +202,6 @@ public class HiGirlFromTianFragment extends EveDiBaseFragment<HiGirlFromTianPres
 																.setImgUrl(item.getPicUrl())
 																.setCategorye(category)
 																.builder();
-		Navigation.NavToImageDetail(builder);
+		Navigation.navToImageDetail(builder);
 	}
 }

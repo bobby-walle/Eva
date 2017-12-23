@@ -19,7 +19,6 @@ import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.crashreport.CrashReport;
-import com.tencent.smtt.sdk.QbSdk;
 import timber.log.Timber;
 
 /**
@@ -51,11 +50,13 @@ public class InitializeService extends IntentService {
 	}
 
 	private void initApplication() {
-		if (LeakCanary.isInAnalyzerProcess(getApplicationContext())) {
-			// This process is dedicated to LeakCanary for heap analysis.
-			// You should not init your app in this process.
-			return;
-		}
+
+		Context context = getApplicationContext();
+		String packageName = context.getPackageName();
+		String processName = SystemUtils.getProcessName(android.os.Process.myPid());
+		CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
+		strategy.setUploadProcess(processName == null || processName.equals(packageName));
+		CrashReport.initCrashReport(context, Constants.BUGLY_APP_ID, BuildConfig.DEBUG, strategy);
 
 		if (BuildConfig.DEBUG) {
 			Logger.addLogAdapter(new AndroidLogAdapter());
@@ -64,8 +65,13 @@ public class InitializeService extends IntentService {
 
 			ButterKnife.setDebug(true);
 
-			LeakCanary.install(getApplication());
-
+			if (LeakCanary.isInAnalyzerProcess(getApplicationContext())) {
+				// This process is dedicated to LeakCanary for heap analysis.
+				// You should not init your app in this process.
+				return;
+			} else {
+				LeakCanary.install(getApplication());
+			}
 			StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectAll()
 																																			.penaltyLog()
 																																			.build());
@@ -78,25 +84,5 @@ public class InitializeService extends IntentService {
 			BlockCanary.install(getApplicationContext(), new AppBlockCanaryContext())
 								 .start();
 		}
-
-		Context context = getApplicationContext();
-		String packageName = context.getPackageName();
-		String processName = SystemUtils.getProcessName(android.os.Process.myPid());
-		CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
-		strategy.setUploadProcess(processName == null || processName.equals(packageName));
-		CrashReport.initCrashReport(context, Constants.BUGLY_APP_ID, BuildConfig.DEBUG, strategy);
-
-		//x5内核初始化
-		QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
-
-			@Override
-			public void onViewInitFinished(boolean arg0) {
-			}
-
-			@Override
-			public void onCoreInitFinished() {
-			}
-		};
-		QbSdk.initX5Environment(getApplicationContext(), cb);
 	}
 }

@@ -197,6 +197,6 @@ public class ITCircleFromGankCategoryFragment
 																												 .setUrl(item.getUrl())
 																												 .setCategorye(category)
 																												 .builder();
-		Navigation.NavToTencentWeb(builder);
+		Navigation.navToEveWeb(builder);
 	}
 }

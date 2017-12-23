@@ -9,10 +9,9 @@ package bob.eve.walle.di.component;
 
 import bob.eve.mvp.di.component.AppComponent;
 import bob.eve.mvp.di.scope.PreActivity;
-import bob.eve.walle.config.ImplPreferencesHelper;
 import bob.eve.walle.di.module.ActivityModule;
+import bob.eve.walle.ui.activity.EveWebActivity;
 import bob.eve.walle.ui.activity.MainActivity;
-import bob.eve.walle.ui.activity.TencentWebActivity;
 import dagger.Component;
 
 /**
@@ -25,5 +24,5 @@ public interface ActivityComponent {
 
 	void inject(MainActivity mainActivity);
 
-	void inject(TencentWebActivity tencentWebActivity);
+	void inject(EveWebActivity eveWebActivity);
 }

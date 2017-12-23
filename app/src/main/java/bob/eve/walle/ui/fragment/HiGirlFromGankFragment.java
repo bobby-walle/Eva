@@ -204,6 +204,6 @@ public class HiGirlFromGankFragment extends EveDiBaseFragment<HiGirlFromGankPres
 																.setImgUrl(item.getUrl())
 																.setCategorye(category)
 																.builder();
-		Navigation.NavToImageDetail(builder);
+		Navigation.navToImageDetail(builder);
 	}
 }

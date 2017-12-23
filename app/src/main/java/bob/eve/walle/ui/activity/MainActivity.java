@@ -12,7 +12,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -48,8 +47,8 @@ public class MainActivity extends AbsEveBaseActivity<MainPresenter, ActivityComp
 		implements DrawerAdapter.OnItemSelectedListener, IView {
 	private static final int SLIDE_FRAGMENGT_COUNT = 6;
 	private static final int SLIDE_MENU_CODE = 0;
-	private static final int SLIDE_MENU_MOVIE = 1;
-	private static final int SLIDE_MENU_GIRL = 2;
+	private static final int SLIDE_MENU_GIRL = 1;
+	private static final int SLIDE_MENU_MOVIE = 2;
 	private static final int SLIDE_MENU_READ = 3;
 	private static final int SLIDE_MENU_SETTING = 4;
 	private static final int SLIDE_MENU_ABOUT = 5;
@@ -109,20 +108,20 @@ public class MainActivity extends AbsEveBaseActivity<MainPresenter, ActivityComp
 		SupportFragment itCircleTabFragment = findFragment(ITCircleTabFragment.class);
 		if (itCircleTabFragment == null) {
 			mFragments[SLIDE_MENU_CODE] = ITCircleTabFragment.newInstance();
-			mFragments[SLIDE_MENU_MOVIE] = MovieTabFragment.newInstance();
 			mFragments[SLIDE_MENU_GIRL] = HiGirlTabFragment.newInstance();
+			mFragments[SLIDE_MENU_MOVIE] = MovieTabFragment.newInstance();
 			mFragments[SLIDE_MENU_READ] = ReadTabFragment.newInstance();
 			mFragments[SLIDE_MENU_SETTING] = SettingFragment.newInstance();
 			mFragments[SLIDE_MENU_ABOUT] = AboutFragment.newInstance();
 
 			loadMultipleRootFragment(R.id.container, SLIDE_MENU_CODE, mFragments[SLIDE_MENU_CODE],
-															 mFragments[SLIDE_MENU_MOVIE], mFragments[SLIDE_MENU_GIRL],
+															 mFragments[SLIDE_MENU_GIRL], mFragments[SLIDE_MENU_MOVIE],
 															 mFragments[SLIDE_MENU_READ], mFragments[SLIDE_MENU_SETTING],
 															 mFragments[SLIDE_MENU_ABOUT]);
 		} else {
 			mFragments[SLIDE_MENU_CODE] = itCircleTabFragment;
-			mFragments[SLIDE_MENU_MOVIE] = findFragment(MovieTabFragment.class);
 			mFragments[SLIDE_MENU_GIRL] = findFragment(HiGirlTabFragment.class);
+			mFragments[SLIDE_MENU_MOVIE] = findFragment(MovieTabFragment.class);
 			mFragments[SLIDE_MENU_READ] = findFragment(ReadTabFragment.class);
 			mFragments[SLIDE_MENU_SETTING] = findFragment(SettingFragment.class);
 			mFragments[SLIDE_MENU_ABOUT] = findFragment(AboutFragment.class);
@@ -142,10 +141,12 @@ public class MainActivity extends AbsEveBaseActivity<MainPresenter, ActivityComp
 		screenTitles = loadScreenTitles();
 
 		adapter = new DrawerAdapter(Arrays.asList(createItemFor(SLIDE_MENU_CODE).setChecked(true),
-																							createItemFor(SLIDE_MENU_MOVIE),
-																							createItemFor(SLIDE_MENU_GIRL), new SpaceItem(38)
+																							createItemFor(SLIDE_MENU_GIRL), // 妹纸
+																							createItemFor(SLIDE_MENU_MOVIE), // 小电影 哈哈～
+																							new SpaceItem(38), // 空item
 																							//createItemFor(SLIDE_MENU_READ) 暂时关闭阅读模块
-				, createItemFor(SLIDE_MENU_SETTING), createItemFor(SLIDE_MENU_ABOUT)));
+																							createItemFor(SLIDE_MENU_SETTING), // 设置
+																							createItemFor(SLIDE_MENU_ABOUT))); // 关于
 		adapter.setListener(this);
 
 		RecyclerView list = findViewById(R.id.menu_rv);
@@ -155,25 +156,6 @@ public class MainActivity extends AbsEveBaseActivity<MainPresenter, ActivityComp
 
 		adapter.setSelected(SLIDE_MENU_CODE);
 	}
-
-	private Fragment creatAboutFragment() {
-		//		LibsSupportFragment fragment =
-		new LibsBuilder().withLibraries(LIBRARIES)
-										 .withAutoDetect(false)
-										 .withLicenseShown(true)
-										 .withVersionShown(true)
-										 .withActivityTitle("关于")
-										 .withActivityStyle(Libs.ActivityStyle.LIGHT_DARK_TOOLBAR)
-										 .start(MainActivity.this);
-		//												 .supportFragment();
-		return null;
-	}
-
-	private String[] LIBRARIES = new String[] {
-			"butterknife", "gson", "sliding-root-nav", "okhttp", "recyclerview_v7", "smartrefresh",
-			"folding-cell", "crashreport", "cardview", "recyclerview", "photoview", "dagger", "RxCache",
-			"rxjava", "rxandroid"
-	};
 
 	@Override
 	protected void onResume() {
@@ -226,6 +208,15 @@ public class MainActivity extends AbsEveBaseActivity<MainPresenter, ActivityComp
 
 	}
 
+	@Override
+	public void onBackPressedSupport() {
+		if (slidingRootNav != null && slidingRootNav.isMenuOpened()) {
+			slidingRootNav.closeMenu();
+		} else {
+			super.onBackPressedSupport();
+		}
+	}
+
 	private DrawerItem createItemFor(int position) {
 		return new SimpleItem(screenIcons[position], screenTitles[position]).withIconTint(
 				color(R.color.textColorSecondary))
@@ -259,4 +250,24 @@ public class MainActivity extends AbsEveBaseActivity<MainPresenter, ActivityComp
 		preferencesHelper.setNightModeState(isNight);
 		useNightMode(isNight);
 	}
+
+	// about配置
+	private void creatAboutFragment() {
+		//		LibsSupportFragment fragment =
+		new LibsBuilder().withLibraries(LIBRARIES)
+										 .withAutoDetect(false)
+										 .withLicenseShown(true)
+										 .withVersionShown(true)
+										 .withActivityTitle("关于")
+										 .withActivityStyle(Libs.ActivityStyle.LIGHT_DARK_TOOLBAR)
+										 .start(MainActivity.this);
+		//												 .supportFragment();
+
+	}
+
+	private String[] LIBRARIES = new String[] {
+			"butterknife", "gson", "sliding-root-nav", "okhttp", "recyclerview_v7", "smartrefresh",
+			"folding-cell", "crashreport", "cardview", "recyclerview", "photoview", "dagger", "RxCache",
+			"rxjava", "rxandroid"
+	};
 }

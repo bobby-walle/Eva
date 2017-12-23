@@ -22,7 +22,7 @@ import javax.inject.Inject;
  * Created by Bob on 17/12/12.
  */
 
-public class PmWeatherApplication extends EveBaseApplication implements IApplication {
+public class EveApplication extends EveBaseApplication implements IApplication {
 	public static int SCREEN_WIDTH = -1;
 	public static int SCREEN_HEIGHT = -1;
 	public static float DIMEN_RATE = -1.0F;
