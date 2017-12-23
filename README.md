@@ -11,6 +11,8 @@ Eve and Wall-e
         <br />感谢所有做分享的个人和公司，欢迎提Issues @@～
         <br />gank.io、Douban、MVPArms ==
         </b>]]>
+# Architectural
+<img src="https://github.com/BobEve/Eve/blob/master/EveArchitecture.png">
 
 ## Functionality & Libraries
 1. [`Mvp` Google's official` Mvp` architecture project, which contains several different schema branches (this is the Dagger branch).](https://github.com/googlesamples/android-architecture/tree/todo-mvp-dagger/)
