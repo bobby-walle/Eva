@@ -11,17 +11,16 @@ Eve and Wall-e
 <br />
 <br />感谢所有做分享的个人和公司，欢迎提Issues @@～
 <br />gank.io、Douban、MVPArms ==
-</b>
 
 ## Summary 
 练习Dagger、Clean、MVP模式开发应用，把RxJava、Retrofit等热门的开源库结合起来。
-于是就有了Eve，主要是Gank.io的数据，使用Retrofit、Rxjava、RxCache实现网络和缓存。
-通过主题颜色完成夜间模式切换，做了一个类似知乎广告的图片展示，但是真心内存占用大。
-最后，我想说给我一个UI妹纸吧，设计果然是很难的，要继续优化。
-虽然用的不会多，主要对整体架构更了解了，很有收获～
+<br />于是就有了Eve，主要是Gank.io的数据，使用Retrofit、Rxjava、RxCache实现网络和缓存。
+<br />通过主题颜色完成夜间模式切换，做了一个类似知乎广告的图片展示，但是真心内存占用大。
+<br />最后，我想说给我一个UI妹纸吧，设计果然是很难的，要继续优化。
+<br />虽然用的不会多，主要对整体架构更了解了，很有收获～
 
 # Architectural
-<img src="https://github.com/BobEve/Eve/blob/master/EveArchitecture.png">
+![](/screen/EveArchitecture.png)
 
 # Download
 [下载](http://fir.im/walle)
