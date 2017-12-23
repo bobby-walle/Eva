@@ -50,8 +50,7 @@ Eve and Wall-e
 13. [`SmartRefreshLayout`](https://github.com/scwang90/SmartRefreshLayout)
 13. [`folding-cell`](https://github.com/Ramotion/folding-cell-android)
 
-Thanks：
-------------
+#Thanks：
 谢谢gank.io提供API，感谢为开源不遗余力的小伙伴，欢迎star，fork。
 
 #Licensed
